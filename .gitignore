@@ -1,0 +1,10 @@
+/luarocks
+/lua
+/lua_modules
+/.luarocks
+
+/*_temp
+/logs
+/nginx.conf.compiled
+
+/todo.lua
