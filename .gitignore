@@ -7,4 +7,4 @@
 /logs
 /nginx.conf.compiled
 
-/todo.lua
+!/js/.gitkeep

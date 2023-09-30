@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html charset="utf-8" lang="en">
+<head>
+  <title><%= page_title or "404 - OSIS SMPIT AL-Qalam" %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/js/htmx.js"></script>
+</head>
+<body>
+  <% content_for("inner") %>
+</body>
+</html>
