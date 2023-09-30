@@ -3,7 +3,8 @@
 <head>
   <title><%= page_title or "404 - OSIS SMPIT AL-Qalam" %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="/js/htmx.js"></script>
+  <script src="/static/deps/js/htmx.js"></script>
+  <script src="/static/deps/js/_hyperscript.js"></script>
 </head>
 <body>
   <% content_for("inner") %>

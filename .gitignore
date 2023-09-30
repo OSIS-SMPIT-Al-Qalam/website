@@ -7,4 +7,6 @@
 /logs
 /nginx.conf.compiled
 
-!/js/.gitkeep
+/*.log
+
+!/static/deps/.gitkeep

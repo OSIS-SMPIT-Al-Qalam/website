@@ -4,8 +4,8 @@ local app = lapis.Application()
 app:enable("etlua")
 app.layout = require("views.layout")
 
-app:get("/", function(self)
-    self.inner = "Hello"
+app:get("index", "/", function(self)
+    return { render = true }
 end)
 
 return app
