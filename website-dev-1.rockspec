@@ -7,6 +7,10 @@ description = {
    homepage = "https://github.com/osis-smpit-alqalam/website",
    license = "*** please specify a license ***"
 }
+dependencies = {
+    "lapis",
+    "cmark"
+}
 build = {
    type = "builtin",
    modules = {
