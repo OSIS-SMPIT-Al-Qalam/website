@@ -1,12 +1,15 @@
-<!DOCTYPE html>
-<html charset="utf-8" lang="en">
-<head>
-  <title><%= page_title or "404 - OSIS SMPIT AL-Qalam" %></title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="/static/deps/js/htmx.js"></script>
-  <script src="/static/deps/js/_hyperscript.js"></script>
-</head>
-<body>
-  <% content_for("inner") %>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      <!-- prettier-ignore -->
+      <%= page_title .. " - OSIS SMPIT Al-Qalam Kendari"
+      or "404 - OSIS SMPIT Al-Qalam Kendari" %>
+    </title>
+  </head>
+  <body>
+    <% content_for("inner") %>
+  </body>
 </html>
