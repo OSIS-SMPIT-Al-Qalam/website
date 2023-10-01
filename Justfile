@@ -8,17 +8,17 @@ deps := '''
 
 alias on := start
 
-# Kill any server instance and rerun the server
+# Kill any existing server instance and run the server
 @start:
-    lapis term >lapis_term.log || echo "Server is not running."
+    -lapis term >/dev/null
     lapis serve
 
 alias updw := update-web
 
 # Update dependencies required by the frontend side
-update-web:
+update-web: dev-init
     #!/usr/bin/env bash
-    cd static/deps
+    cd static/depsi
     echo "Performing download..."
     deps=({{deps}})
     for v in "${deps[@]}"; do
@@ -35,5 +35,12 @@ update-web:
 alias updl := update-lua
 
 # Update dependencies required by the backend side
-@update-lua:
+@update-lua: dev-init
     luarocks install website-dev-1.rockspec --only-deps
+
+alias init := dev-init
+
+# Initialize development environment
+dev-init:
+    luarocks init
+    command -v direnv && direnv allow .
