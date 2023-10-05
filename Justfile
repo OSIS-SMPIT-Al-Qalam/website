@@ -38,9 +38,18 @@ alias updl := update-lua
 @update-lua: dev-init
     luarocks install website-dev-1.rockspec --only-deps
 
+# Test website
+test browser="firefox": dev-init
+    #!/usr/bin/env bash
+    lapis term
+    lapis serve &
+    bun run cypress run -b "$1" || true
+    kill %1
+
 alias init := dev-init
 
 # Initialize development environment
 dev-init:
-    luarocks init
-    command -v direnv && direnv allow .
+    -[[ ! -d lua_modules ]] && luarocks init
+    -command -v direnv && direnv allow .
+    -[[ ! -d node_modules ]] && command -v bun && bun install
