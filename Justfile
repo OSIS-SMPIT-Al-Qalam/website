@@ -18,7 +18,7 @@ alias updw := update-web
 # Update dependencies required by the frontend side
 update-web: dev-init
     #!/usr/bin/env bash
-    cd static/depsi
+    cd static/deps
     echo "Performing download..."
     deps=({{deps}})
     for v in "${deps[@]}"; do
