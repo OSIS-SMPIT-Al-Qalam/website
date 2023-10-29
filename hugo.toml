@@ -1,0 +1,12 @@
+baseURL = 'https://osis-smpit-alqalam.gosch.id/'
+languageCode = 'id-id'
+title = 'OSIS SMPIT Al-Qalam Kendari'
+
+theme = ['github.com/theNewDynamic/gohugo-theme-ananke']
+
+[params]
+favicon = "http://localhost:1313/favicon.ico"
+
+[[params.ananke_socials]]
+name = 'instagram'
+url = 'https://www.instagram.com/osissmpitalqalamkendari_/'
